@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V1hexuhhdd90yqtrnmatk">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="ClassDiagram20"/>
+		<reference referencedUin="jdt:e_class:src:MonopolyGame">
+			<property name="bounds" value="398,315,179,434"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:MonopolyGame:gameBoard">
+				<property name="sourceAnchor" value="406,320"/>
+				<property name="targetAnchor" value="406,314"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:MonopolyGame:Die1">
+				<property name="sourceAnchor" value="582,440"/>
+				<property name="targetAnchor" value="660,440"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:MonopolyGame:Die2">
+				<property name="sourceAnchor" value="582,432"/>
+				<property name="targetAnchor" value="660,432"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:MonopolyGame:players">
+				<property name="sourceAnchor" value="582,500"/>
+				<property name="targetAnchor" value="840,500"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:BoardSquare">
+			<property name="bounds" value="35,15,142,174"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Player">
+			<property name="bounds" value="835,295,154,354"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Board">
+			<property name="bounds" value="398,15,180,294"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Board:pieces">
+				<property name="sourceAnchor" value="583,122"/>
+				<property name="targetAnchor" value="840,122"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:Board.pieces">
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Board:squares">
+				<property name="sourceAnchor" value="403,127"/>
+				<property name="targetAnchor" value="182,127"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Piece">
+			<property name="bounds" value="835,15,186,214"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Die">
+			<property name="bounds" value="655,395,110,80"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:TestPlayer">
+			<property name="bounds" value="1095,295,135,154"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:TestPlayer:PlayerTest">
+				<property name="sourceAnchor" value="1100,377"/>
+				<property name="targetAnchor" value="994,377"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:TestPiece">
+			<property name="bounds" value="1095,15,125,154"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:TestPiece:PieceTest">
+				<property name="sourceAnchor" value="1100,102"/>
+				<property name="targetAnchor" value="1026,102"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:TestDie">
+			<property name="bounds" value="655,155,125,154"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:TestDie:DieTest">
+				<property name="sourceAnchor" value="692,314"/>
+				<property name="targetAnchor" value="692,400"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:TestBoardSquare">
+			<property name="bounds" value="35,308,200,154"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:TestBoardSquare:BoardSquareTest">
+				<property name="sourceAnchor" value="113,313"/>
+				<property name="targetAnchor" value="113,214"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:TestBoard">
+			<property name="bounds" value="215,142,152,154"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:TestBoard:BoardToTest">
+				<property name="sourceAnchor" value="372,227"/>
+				<property name="targetAnchor" value="403,227"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:StartSquare">
+			<property name="bounds" value="215,-5,142,114"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:StartSquare:BoardSquare">
+				<property name="sourceAnchor" value="220,68"/>
+				<property name="targetAnchor" value="182,68"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:PropertySquare">
+			<property name="bounds" value="35,335,142,114"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:PropertySquare:BoardSquare">
+				<property name="sourceAnchor" value="128,340"/>
+				<property name="targetAnchor" value="128,194"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:WaterSquare">
+			<property name="bounds" value="215,275,142,114"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:WaterSquare:BoardSquare">
+				<property name="sourceAnchor" value="246,280"/>
+				<property name="targetAnchor" value="179,194"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:ElectricitySquare">
+			<property name="bounds" value="196,128,145,114"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:ElectricitySquare:BoardSquare">
+				<property name="sourceAnchor" value="201,163"/>
+				<property name="targetAnchor" value="182,163"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>
