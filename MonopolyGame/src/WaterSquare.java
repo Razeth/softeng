@@ -5,7 +5,7 @@ public class WaterSquare extends BoardSquare {
 		this.sqPosition=sqPosition;														//Set the position
 	}
 	
-	public String landedOn(Player player, Board board)
+	public String landedOn(Player player, Board board, MonopolyGame game)
 	{
 		int moneyPaid=75;
 		player.subMoney(moneyPaid);

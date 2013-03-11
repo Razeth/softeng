@@ -5,7 +5,7 @@ public class ElectricitySquare extends BoardSquare {
 		this.sqPosition=sqPosition;														//Set the position
 	}
 	
-	public String landedOn(Player player, Board board)
+	public String landedOn(Player player, Board board, MonopolyGame game)
 	{
 		int moneyPaid=0;
 		if((player.getMoney()/100)*10<=200) moneyPaid=200;

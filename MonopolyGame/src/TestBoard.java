@@ -1,9 +1,9 @@
 public class TestBoard {
 	Board BoardToTest;
 	
-	public TestBoard()
+	public TestBoard(MonopolyGame game)
 	{
-		BoardToTest = new Board(2);
+		BoardToTest = new Board(2,game);
 	}
 	
 	public String runTest()

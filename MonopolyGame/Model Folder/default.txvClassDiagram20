@@ -6,53 +6,53 @@
 		<property name="$defaultDiagram" value="true"/>
 		<property name="$metaclass" value="ClassDiagram20"/>
 		<reference referencedUin="jdt:e_class:src:MonopolyGame">
-			<property name="bounds" value="398,315,179,434"/>
+			<property name="bounds" value="698,315,149,332"/>
 			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:MonopolyGame:gameBoard">
-				<property name="sourceAnchor" value="406,320"/>
-				<property name="targetAnchor" value="406,314"/>
-			</reference>
 			<reference referencedUin="jdt:l_ast:src:MonopolyGame:Die1">
-				<property name="sourceAnchor" value="582,440"/>
-				<property name="targetAnchor" value="660,440"/>
+				<property name="sourceAnchor" value="852,440"/>
+				<property name="targetAnchor" value="960,440"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:MonopolyGame:gameBoard">
+				<property name="sourceAnchor" value="706,320"/>
+				<property name="targetAnchor" value="706,247"/>
 			</reference>
 			<reference referencedUin="jdt:l_ast:src:MonopolyGame:Die2">
-				<property name="sourceAnchor" value="582,432"/>
-				<property name="targetAnchor" value="660,432"/>
+				<property name="sourceAnchor" value="852,432"/>
+				<property name="targetAnchor" value="960,432"/>
 			</reference>
 			<reference referencedUin="jdt:l_ast:src:MonopolyGame:players">
-				<property name="sourceAnchor" value="582,500"/>
-				<property name="targetAnchor" value="840,500"/>
+				<property name="sourceAnchor" value="852,500"/>
+				<property name="targetAnchor" value="1140,500"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:BoardSquare">
-			<property name="bounds" value="35,15,142,174"/>
+			<property name="bounds" value="335,15,119,227"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:Player">
-			<property name="bounds" value="835,295,154,354"/>
+			<property name="bounds" value="1135,295,128,273"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:Board">
-			<property name="bounds" value="398,15,180,294"/>
+			<property name="bounds" value="698,15,148,227"/>
 			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:Board:pieces">
-				<property name="sourceAnchor" value="583,122"/>
-				<property name="targetAnchor" value="840,122"/>
-			</reference>
 			<reference referencedUin="jdt:e_field:src:Board.pieces">
 			</reference>
+			<reference referencedUin="jdt:l_ast:src:Board:pieces">
+				<property name="sourceAnchor" value="851,122"/>
+				<property name="targetAnchor" value="1140,122"/>
+			</reference>
 			<reference referencedUin="jdt:l_ast:src:Board:squares">
-				<property name="sourceAnchor" value="403,127"/>
-				<property name="targetAnchor" value="182,127"/>
+				<property name="sourceAnchor" value="703,127"/>
+				<property name="targetAnchor" value="459,127"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:Piece">
-			<property name="bounds" value="835,15,186,214"/>
+			<property name="bounds" value="1135,15,156,168"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:Die">
-			<property name="bounds" value="655,395,110,80"/>
+			<property name="bounds" value="955,395,95,80"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:TestPlayer">
@@ -101,35 +101,35 @@
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:StartSquare">
-			<property name="bounds" value="215,-5,142,114"/>
+			<property name="bounds" value="495,155,119,91"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:l_gnt:src:StartSquare:BoardSquare">
-				<property name="sourceAnchor" value="220,68"/>
-				<property name="targetAnchor" value="182,68"/>
+				<property name="sourceAnchor" value="500,203"/>
+				<property name="targetAnchor" value="459,203"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:PropertySquare">
-			<property name="bounds" value="35,335,142,114"/>
+			<property name="bounds" value="95,15,119,91"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:l_gnt:src:PropertySquare:BoardSquare">
-				<property name="sourceAnchor" value="128,340"/>
-				<property name="targetAnchor" value="128,194"/>
+				<property name="sourceAnchor" value="219,65"/>
+				<property name="targetAnchor" value="340,65"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:WaterSquare">
-			<property name="bounds" value="215,275,142,114"/>
+			<property name="bounds" value="95,135,119,91"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:l_gnt:src:WaterSquare:BoardSquare">
-				<property name="sourceAnchor" value="246,280"/>
-				<property name="targetAnchor" value="179,194"/>
+				<property name="sourceAnchor" value="219,185"/>
+				<property name="targetAnchor" value="340,185"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:ElectricitySquare">
-			<property name="bounds" value="196,128,145,114"/>
+			<property name="bounds" value="334,315,122,91"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:l_gnt:src:ElectricitySquare:BoardSquare">
-				<property name="sourceAnchor" value="201,163"/>
-				<property name="targetAnchor" value="182,163"/>
+				<property name="sourceAnchor" value="399,320"/>
+				<property name="targetAnchor" value="399,247"/>
 			</reference>
 		</reference>
 	</view>

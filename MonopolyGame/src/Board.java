@@ -8,15 +8,20 @@
 /////////////////////////////////////////////
 
 
+import java.awt.Color;
+
+
 public class Board {
 	private Piece[] pieces;																//Holds the pieces
 	private int pieceCount;																//Holds the # of pieces
 	
 	private BoardSquare[] squares;														//Holds the squares
 	private int squareCount;															//Holds the # of squares
+	private MonopolyGame game;
 	
-	public Board(int playerAmount)														//Board Constructor
+	public Board(int playerAmount, MonopolyGame game)														//Board Constructor
 	{
+		this.game = game;
 		squareCount=24;																	//Square amount
 		squares = new BoardSquare[squareCount];											//Initialise the square array
 		for(int i=0;i<squareCount;i++)													//For each space
@@ -40,7 +45,7 @@ public class Board {
 			else 
 			{
 				squareName="Square #"+Integer.toString(i);
-				squares[i] = new PropertySquare(squareName,i);									//Fill it with a square
+				squares[i] = new PropertySquare(squareName,i,(5+i)*10,25,Color.BLUE);									//Fill it with a square
 			}
 		}
 		pieceCount=playerAmount;
@@ -81,7 +86,7 @@ public class Board {
 	
 	public String landedOn(int pieceID, Player player)
 	{
-		return squares[pieces[pieceID].getPosition()].landedOn(player, this);
+		return squares[pieces[pieceID].getPosition()].landedOn(player, this, game);
 	}
 	
 }

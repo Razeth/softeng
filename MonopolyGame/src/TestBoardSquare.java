@@ -1,9 +1,11 @@
+import java.awt.Color;
+
 public class TestBoardSquare {
 	BoardSquare BoardSquareTest;
 	
 	public TestBoardSquare()
 	{
-		BoardSquareTest = new PropertySquare("Test Square",0);
+		BoardSquareTest = new PropertySquare("Test Square",0,10,20,Color.BLUE);
 	}
 	
 	public String runTest()

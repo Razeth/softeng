@@ -51,7 +51,7 @@ public class MonopolyGame extends JFrame {											//Main class, extends JFram
 	
 	public void setUpBoard()														//Function to initialise the board
 	{
-		gameBoard = new Board(numberOfPlayers);										//Initialise the board, containing enough pieces for each player
+		gameBoard = new Board(numberOfPlayers, this);										//Initialise the board, containing enough pieces for each player
 	}
 	
 	public void setUpPlayers()														//Function to initialise the players
@@ -66,6 +66,15 @@ public class MonopolyGame extends JFrame {											//Main class, extends JFram
 			players[i]=new Player(playerName);										//Create the player with specified name
 			players[i].setPiece(pieceID);											//Give it the piece
 		}
+	}
+	
+	public Player getPlayerFromPieceID(int pieceID)
+	{
+		for(int player=0;player<numberOfPlayers;player++)
+		{
+			if(players[player].getPiece()==pieceID) return players[player];
+		}
+		return null;
 	}
 	
 	public void takeTurns()															//Function to take turns
@@ -140,8 +149,9 @@ public class MonopolyGame extends JFrame {											//Main class, extends JFram
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		TestBoard BoardTest = new TestBoard();
+		MonopolyGame testGame = new MonopolyGame();
+		testGame.setVisible(false);
+		TestBoard BoardTest = new TestBoard(testGame);
 		TestBoardSquare BoardSquareTest = new TestBoardSquare();
 		TestDie DieTest = new TestDie();
 		TestPiece PieceTest = new TestPiece();
@@ -152,6 +162,13 @@ public class MonopolyGame extends JFrame {											//Main class, extends JFram
 		System.out.println(DieTest.runTest());
 		System.out.println(PieceTest.runTest());
 		System.out.println(PlayerTest.runTest());
+		
+		PlayerTest=null;
+		PieceTest=null;
+		DieTest=null;
+		BoardSquareTest=null;
+		BoardTest=null;
+		testGame=null;
 		
 		SwingUtilities.invokeLater(new Runnable()									//Once all other computations are finished
 		{
