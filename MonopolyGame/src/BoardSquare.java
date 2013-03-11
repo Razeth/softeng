@@ -13,7 +13,7 @@ import java.awt.Color;
 public class BoardSquare {
 
 	int sqPosition;																		//Square position
-	int playerID;																		//Square owner
+	Player owner;																		//Square owner
 	String sqName;																		//Square name
 	int cost;																			//Cost to purchase Square
 	int rent;																			//Rent, the getRent function will return this if it does not return a more complex number
@@ -29,18 +29,18 @@ public class BoardSquare {
 		return sqName;
 	}
 	
-	public void setOwner(int playerID)
+	public void setOwner(Player owner)
 	{
-		this.playerID=playerID;
+		this.owner=owner;
 	}
 	
-	public int getOwner()
+	public Player getOwner()
 	{
-		return playerID;
+		return owner;
 	}
 	
 	
-	public String landedOn(Player player, Board board, MonopolyGame game)
+	public String landedOn(Player player, Board board)
 	{
 		return "";
 	}

@@ -17,11 +17,9 @@ public class Board {
 	
 	private BoardSquare[] squares;														//Holds the squares
 	private int squareCount;															//Holds the # of squares
-	private MonopolyGame game;
 	
-	public Board(int playerAmount, MonopolyGame game)														//Board Constructor
+	public Board(int playerAmount)														//Board Constructor
 	{
-		this.game = game;
 		squareCount=24;																	//Square amount
 		squares = new BoardSquare[squareCount];											//Initialise the square array
 		for(int i=0;i<squareCount;i++)													//For each space
@@ -86,7 +84,7 @@ public class Board {
 	
 	public String landedOn(int pieceID, Player player)
 	{
-		return squares[pieces[pieceID].getPosition()].landedOn(player, this, game);
+		return squares[pieces[pieceID].getPosition()].landedOn(player, this);
 	}
 	
 }
