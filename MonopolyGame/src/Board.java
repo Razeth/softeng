@@ -9,6 +9,13 @@
 
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.net.URL;
 
 
 public class Board {
@@ -22,28 +29,115 @@ public class Board {
 	{
 		squareCount=24;																	//Square amount
 		squares = new BoardSquare[squareCount];											//Initialise the square array
-		for(int i=0;i<squareCount;i++)													//For each space
+		String line="";
+		String[] splitArray;
+		File file = new File("board.txt");
+		if(file.exists())
 		{
-			String squareName;
-			if(i==0)
-			{
-				squareName="Start";
-				squares[i] = new StartSquare(squareName,i);	
+			try {
+				BufferedReader reader = new BufferedReader(new FileReader(file));
+				try {
+					int i=0;
+					squares[i] = new StartSquare("Start",i);
+					i=1;
+					while((line = reader.readLine()) != null)
+					{
+						splitArray = line.split(",");
+						switch(splitArray[4])
+						{
+						case "Purple":
+							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.MAGENTA);
+							break;
+						case "Cyan":
+							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.CYAN);
+							break;
+						case "Violet":
+							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.PINK);
+							break;
+						case "Orange":
+							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.ORANGE);
+							break;
+						case "Red":
+							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.RED);
+							break;
+						case "Yellow":
+							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.YELLOW);
+							break;
+						case "Green":
+							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.GREEN);
+							break;
+						case "Grey":
+							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.GRAY);
+							break;
+						case "Electricity":
+							squares[i] = new ElectricitySquare(splitArray[0],i);
+							break;
+						case "Water":
+							squares[i] = new WaterSquare(splitArray[0],i);
+							break;
+						case "Jail":
+							squares[i] = new JailSquare(splitArray[0],i);
+							break;
+						case "Card":
+							squares[i] = new CardSquare(splitArray[0],i);
+							break;
+						case "SendJail":
+							squares[i] = new SendJailSquare(splitArray[0],i);
+							break;
+						case "Blank":
+							squares[i] = new WaterSquare(splitArray[0],i);
+							break;
+						
+						}
+						System.out.println(splitArray[0]+" "+splitArray[3]+" "+splitArray[3]+" "+i);
+						i+=1;
+						
+					}
+				}
+				catch (IOException e) {}
+				try {reader.close();}
+				catch (IOException e) {}
 			}
-			else if(i==2)
-			{
-				squareName="Electricity";
-				squares[i] = new ElectricitySquare(squareName,i);
+			catch (FileNotFoundException e) {
+				
 			}
-			else if(i==14)
+		
+		
+			//System.out.println(System.getProperty("user.dir"));
+			//int i=0;
+			//First, create the start square
+		
+			
+		}
+		else
+		{
+		
+			for(int i=0;i<squareCount;i++)													//For each space
 			{
-				squareName="Water";
-				squares[i] = new WaterSquare(squareName,i);
-			}
-			else 
-			{
-				squareName="Square #"+Integer.toString(i);
-				squares[i] = new PropertySquare(squareName,i,(5+i)*10,25,Color.BLUE);									//Fill it with a square
+				String squareName;
+				if(i==0)
+				{
+					squareName="Start";
+					squares[i] = new StartSquare(squareName,i);	
+				}
+				else
+				{
+					if(i==2)
+					{
+						squareName="Electricity";
+						squares[i] = new ElectricitySquare(squareName,i);
+					}
+					else if(i==14)
+					{
+						squareName="Water";
+						squares[i] = new WaterSquare(squareName,i);
+					}
+					else 
+					{
+						squareName="Square #"+Integer.toString(i);
+						squares[i] = new PropertySquare(squareName,i,(5+i)*10,25,Color.BLUE);									//Fill it with a square
+					}
+				}
 			}
 		}
 		pieceCount=playerAmount;
@@ -52,6 +146,15 @@ public class Board {
 		{
 			pieces[i] = new Piece("Piece #"+Integer.toString(i),i);						//Initialise with a name and an ID
 		}
+	}
+	
+	public int owns(Player player, String name)
+	{
+		for(int i=0;i<squareCount;i++)
+		{
+			if(squares[i].getName()==name&&squares[i].getOwner()==player) return 1;
+		}
+		return 0;
 	}
 	
 	public int assignPiece()															//Functions for piece assignment
@@ -74,7 +177,9 @@ public class Board {
 	
 	public String getPosition(int pieceID)												//Function for getting a pieces position
 	{
-		return squares[pieces[pieceID].getPosition()].getName();
+		System.out.println(pieces[pieceID].getPosition());
+		String returnString = squares[pieces[pieceID].getPosition()].getName();
+		return returnString;
 	}
 	
 	public int getPositionInt(int pieceID)												//Function for getting a pieces position

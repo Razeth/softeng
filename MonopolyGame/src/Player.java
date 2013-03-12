@@ -12,6 +12,7 @@ public class Player {
 	private String playerName;														//Player's Name
 	private int money;																//Player's Money
 	private int piece;																//Players Piece ID
+	private int roll;
 	
 	public Player()																	//Player Constructor
 	{
@@ -61,8 +62,13 @@ public class Player {
 	
 	public int takeTurn(Die Die1, Die Die2)											//Players turn function
 	{
-		int Roll = Die1.Roll()+Die2.Roll();											//Roll the die
-		return Roll;																//Return the result
+		roll = Die1.Roll()+Die2.Roll();											//Roll the die
+		return roll;																//Return the result
+	}
+	
+	public int readDice()
+	{
+		return roll;
 	}
 
 }
