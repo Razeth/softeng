@@ -1,0 +1,24 @@
+Go,0,0,0,Card
+Normanton Road,1,50,5,Purple
+Belper Road,2,60,10,Purple
+Electricity,3,150,*,Electricity
+Uttoxeter Road,4,100,15,Cyan
+Burton Road,5,120,15,Cyan
+Jail,6,0,0,Jail
+High Street,7,140,20,Violet
+Allenton Avenue,8,150,20,Violet
+Chance,9,0,0,Card
+Saddlergate,10,180,25,Orange
+Irongate,11,200,25,Orange
+Airport,12,0,0,Card
+Oakwood,13,220,30,Red
+Chaddesden,14,240,40,Red
+Water,15,150,*,Water
+Sinfin,16,260,50,Yellow
+Stenson Fields,17,280,60,Yellow
+Go To Jail,0,0,0,SendJail
+Mickleover,19,300,70,Green
+Littleover,20,320,80,Green
+Chance,21,0,0,Card
+Allestree,22,350,90,Grey
+Quarndon,23,400,100,Grey

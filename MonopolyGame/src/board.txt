@@ -1,0 +1,18 @@
+Normanton Road,1,50,5,Purple
+Belper Road,2,60,10,Purple
+Uttoxeter Road,4,100,15,Cyan
+Burton Road,5,120,15,Cyan
+High Street,7,140,20,Violet
+Allenton Avenue,8,150,20,Violet
+Saddlergate,10,180,25,Orange
+Irongate,11,200,25,Orange
+Oakwood,13,220,30,Red
+Chaddesden,14,240,40,Red
+Sinfin,16,260,50,Yellow
+Stenson Fields,17,280,60,Yellow
+Mickleover,19,300,70,Green
+Littleover,20,320,80,Green
+Allestree,22,350,90,Grey
+Quarndon,23,400,100,Grey
+Electricity,3,150,*,Utility
+Water,15,150,*,Utility

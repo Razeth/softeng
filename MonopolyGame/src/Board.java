@@ -27,7 +27,7 @@ public class Board {
 	
 	public Board(int playerAmount)														//Board Constructor
 	{
-		squareCount=24;																	//Square amount
+		squareCount=25;																	//Square amount
 		squares = new BoardSquare[squareCount];											//Initialise the square array
 		String line="";
 		String[] splitArray;
@@ -46,46 +46,46 @@ public class Board {
 						switch(splitArray[4])
 						{
 						case "Purple":
-							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.MAGENTA);
+							squares[i] = new PropertySquare(splitArray[0],Integer.parseInt(splitArray[1]),Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.MAGENTA);
 							break;
 						case "Cyan":
-							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.CYAN);
+							squares[i] = new PropertySquare(splitArray[0],Integer.parseInt(splitArray[1]),Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.CYAN);
 							break;
 						case "Violet":
-							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.PINK);
+							squares[i] = new PropertySquare(splitArray[0],Integer.parseInt(splitArray[1]),Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.PINK);
 							break;
 						case "Orange":
-							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.ORANGE);
+							squares[i] = new PropertySquare(splitArray[0],Integer.parseInt(splitArray[1]),Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.ORANGE);
 							break;
 						case "Red":
-							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.RED);
+							squares[i] = new PropertySquare(splitArray[0],Integer.parseInt(splitArray[1]),Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.RED);
 							break;
 						case "Yellow":
-							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.YELLOW);
+							squares[i] = new PropertySquare(splitArray[0],Integer.parseInt(splitArray[1]),Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.YELLOW);
 							break;
 						case "Green":
-							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.GREEN);
+							squares[i] = new PropertySquare(splitArray[0],Integer.parseInt(splitArray[1]),Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.GREEN);
 							break;
 						case "Grey":
-							squares[i] = new PropertySquare(splitArray[0],i,Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.GRAY);
+							squares[i] = new PropertySquare(splitArray[0],Integer.parseInt(splitArray[1]),Integer.parseInt(splitArray[2]),Integer.parseInt(splitArray[3]),Color.GRAY);
 							break;
 						case "Electricity":
-							squares[i] = new ElectricitySquare(splitArray[0],i);
+							squares[i] = new ElectricitySquare(splitArray[0],Integer.parseInt(splitArray[1]));
 							break;
 						case "Water":
-							squares[i] = new WaterSquare(splitArray[0],i);
+							squares[i] = new WaterSquare(splitArray[0],Integer.parseInt(splitArray[1]));
 							break;
 						case "Jail":
-							squares[i] = new JailSquare(splitArray[0],i);
+							squares[i] = new JailSquare(splitArray[0],Integer.parseInt(splitArray[1]));
 							break;
 						case "Card":
-							squares[i] = new CardSquare(splitArray[0],i);
+							squares[i] = new CardSquare(splitArray[0],Integer.parseInt(splitArray[1]));
 							break;
 						case "SendJail":
-							squares[i] = new SendJailSquare(splitArray[0],i);
+							squares[i] = new SendJailSquare(splitArray[0],Integer.parseInt(splitArray[1]));
 							break;
 						case "Blank":
-							squares[i] = new WaterSquare(splitArray[0],i);
+							squares[i] = new WaterSquare(splitArray[0],Integer.parseInt(splitArray[1]));
 							break;
 						
 						}
@@ -178,8 +178,21 @@ public class Board {
 	public String getPosition(int pieceID)												//Function for getting a pieces position
 	{
 		System.out.println(pieces[pieceID].getPosition());
-		String returnString = squares[pieces[pieceID].getPosition()].getName();
-		return returnString;
+		for(int i=0;i<squareCount;i++)
+		{
+			if(squares[i].getPosition()==pieces[pieceID].getPosition()) return squares[i].getName();
+		}
+		return "Who Knows?";
+	}
+	
+	public int getPositionOfBoardSquare(String name)
+	{
+		for(int i=0;i<squareCount;i++)
+		{
+			if(squares[i].getName()==name) return squares[i].getPosition();
+		}
+		//If not found return -1
+		return -1;
 	}
 	
 	public int getPositionInt(int pieceID)												//Function for getting a pieces position
@@ -189,7 +202,11 @@ public class Board {
 	
 	public String landedOn(int pieceID, Player player)
 	{
-		return squares[pieces[pieceID].getPosition()].landedOn(player, this);
+		for(int i=0;i<squareCount;i++)
+		{
+			if(squares[i].getPosition()==pieces[pieceID].getPosition()) return squares[i].landedOn(player, this);
+		}
+		return "Who knows?";
 	}
 	
 }
