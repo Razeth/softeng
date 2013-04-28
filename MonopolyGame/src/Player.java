@@ -13,23 +13,27 @@ public class Player {
 	private int money;																//Player's Money
 	private int piece;																//Players Piece ID
 	private int roll;
+	private int jailTurns;
 	
 	public Player()																	//Player Constructor
 	{
 		playerName = "Player";														//Set their name
 		money=1500;																	//And money
+		jailTurns=0;
 	}
 	
 	public Player(String playerName)												//If a name is specified
 	{
 		this.playerName = playerName;	
 		this.money=1500;                                                             //Set it
+		this.jailTurns=0;
 	}
 	
 	public Player(String playerName, int money)										//If money is as well
 	{
 		this.playerName = playerName;
 		this.money = money;															//Sets the money
+		this.jailTurns=0;
 	}
 	
 	public void setPiece(int piece)													//Set the piece
@@ -58,6 +62,21 @@ public class Player {
 	public int getPiece()															//Return Piece ID
 	{
 		return this.piece;
+	}
+	
+	public boolean inJail()
+	{
+		if(jailTurns>0)
+		{
+			jailTurns-=1;
+			return true;
+		}
+		else return false;
+	}
+	
+	public void sendToJail()
+	{
+		jailTurns=3;
 	}
 	
 	public int takeTurn(Die Die1, Die Die2)											//Players turn function

@@ -86,18 +86,62 @@ public class MonopolyGame extends JFrame {											//Main class, extends JFram
 			{
 				int startingPosition = gameBoard.getPositionInt(players[player].getPiece());
 				outputBox.append(players[player].getName()+"'s turn!\n\r");				//Announce start of turn
-				roll = players[player].takeTurn(Die1, Die2);						//Roll the dice
-				outputBox.append(players[player].getName()+" rolled a "+Integer.toString(roll)+"!\n\r");
-																						//Announce the roll
-				gameBoard.movePiece(players[player].getPiece(),roll);					//Move the piece
-				if(gameBoard.getPositionInt(players[player].getPiece())<startingPosition&&gameBoard.getPositionInt(players[player].getPiece())!=0) //Then they must have passed Start..
+				if(players[player].inJail()==false)
 				{
-					players[player].addMoney(500);
-					outputBox.append(players[player].getName()+" passed Start and got an extra £500!\n\r");
+					roll = players[player].takeTurn(Die1, Die2);						//Roll the dice
+					outputBox.append(players[player].getName()+" rolled a "+Integer.toString(roll)+"!\n\r");
+																						//Announce the roll
+					gameBoard.movePiece(players[player].getPiece(),roll);					//Move the piece
+					if(gameBoard.getPositionInt(players[player].getPiece())<startingPosition&&gameBoard.getPositionInt(players[player].getPiece())!=0) //Then they must have passed Start..
+					{
+						players[player].addMoney(500);
+						outputBox.append(players[player].getName()+" passed Start and got an extra £500!\n\r");
+					}
+					outputBox.append(gameBoard.landedOn(players[player].getPiece(),players[player]));
+					if(roll==6) outputBox.append(players[player].getName()+" takes another turn!\n\r\n\r");
+					else outputBox.append(players[player].getName()+" currently has £"+players[player].getMoney()+"!\n\r\n\r");
 				}
-				outputBox.append(gameBoard.landedOn(players[player].getPiece(),players[player]));
-				if(roll==6) outputBox.append(players[player].getName()+" takes another turn!\n\r\n\r");
-				else outputBox.append(players[player].getName()+" currently has £"+players[player].getMoney()+"!\n\r\n\r");
+				else
+				{
+					outputBox.append(players[player].getName()+" is still in Jail!\n\r");
+					int buy = JOptionPane.showConfirmDialog(null, "Would you like to pay £50 to get out of Jail?", players[player].getName(), JOptionPane.YES_NO_OPTION);
+					if(buy==JOptionPane.YES_OPTION)
+					{
+						outputBox.append(players[player].getName()+" paid their way out of Jail!\n\r");
+						players[player].subMoney(50);
+						players[player].inJail();
+						players[player].inJail();
+						players[player].inJail();
+						roll=0;
+					}
+					else
+					{
+						roll = players[player].takeTurn(Die1, Die2);						//Roll the dice
+						outputBox.append(players[player].getName()+" rolled a "+Integer.toString(roll)+"!\n\r");
+						if(roll==6)
+						{
+							outputBox.append(players[player].getName()+" rolled their way out of Jail!\n\r");
+							players[player].inJail();
+							players[player].inJail();
+							players[player].inJail();
+							//Announce the roll
+							gameBoard.movePiece(players[player].getPiece(),roll);					//Move the piece
+							if(gameBoard.getPositionInt(players[player].getPiece())<startingPosition&&gameBoard.getPositionInt(players[player].getPiece())!=0) //Then they must have passed Start..
+							{
+								players[player].addMoney(500);
+								outputBox.append(players[player].getName()+" passed Start and got an extra £500!\n\r");
+							}
+							outputBox.append(gameBoard.landedOn(players[player].getPiece(),players[player]));
+							if(roll==6) outputBox.append(players[player].getName()+" takes another turn!\n\r\n\r");
+							else outputBox.append(players[player].getName()+" currently has £"+players[player].getMoney()+"!\n\r\n\r");
+						}
+						else
+						{
+							outputBox.append(players[player].getName()+" failed to get out of Jail!\n\r");
+							outputBox.append(players[player].getName()+" currently has £"+players[player].getMoney()+"!\n\r\n\r");
+						}
+					}
+				}
 			}
 																					//Announce the updated position
 		}

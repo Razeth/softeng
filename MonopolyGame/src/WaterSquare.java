@@ -9,11 +9,6 @@ public class WaterSquare extends BoardSquare {
 	
 	public String landedOn(Player player, Board board, MonopolyGame game)
 	{
-		int moneyPaid=0;
-		moneyPaid=5*player.readDice();
-		if((player.getMoney()/100)*10<=200) moneyPaid=200;
-		else moneyPaid=(player.getMoney()/100)*10;
-		player.subMoney(moneyPaid);
 		
 		
 		if(owner==null)																//This square is not owned

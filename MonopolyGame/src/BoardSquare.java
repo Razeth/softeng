@@ -39,6 +39,10 @@ public class BoardSquare {
 		return owner;
 	}
 	
+	public Color getColor()
+	{
+		return colour;
+	}
 	
 	public String landedOn(Player player, Board board)
 	{

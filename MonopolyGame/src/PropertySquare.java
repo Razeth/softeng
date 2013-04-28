@@ -33,8 +33,11 @@ public class PropertySquare extends BoardSquare {
 			//If a different player owns it.
 			if(owner!=null)
 			{
-				player.subMoney(rent);
-				owner.addMoney(rent);
+				//Check if the owner of this board colour owns the rest..
+				int tempRent = rent;
+				if(board.checkSet(owner,colour)) tempRent*=2;
+				player.subMoney(tempRent);
+				owner.addMoney(tempRent);
 				return player.getName()+" landed on "+owner.getName()+"'s "+this.sqName+"!\n\r"+player.getName()+" pays them £"+this.rent+"!\n\r\n\r";
 			}
 		}
