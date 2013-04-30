@@ -1,3 +1,11 @@
+/////////////////////////////////////////////
+//                                         //
+//             TestPiece.java              //
+//                                         //
+// Test Piece class, tests the piece class // 
+//                                         //
+/////////////////////////////////////////////
+
 public class TestPiece {
 	Piece PieceTest;
 	

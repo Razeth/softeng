@@ -64,24 +64,24 @@ public class Player {
 		return this.piece;
 	}
 	
-	public boolean inJail()
+	public boolean inJail()															//Jail function
 	{
-		if(jailTurns>0)
+		if(jailTurns>0)																//If in jail
 		{
-			jailTurns-=1;
-			return true;
+			jailTurns-=1;															//Reduce number of turns
+			return true;															//Return yes, they are in jail
 		}
-		else return false;
+		else return false;															//Else, turns are 0, not in jail (at least, not anymore..) return false!
 	}
-	
-	public void sendToJail()
+		
+	public void sendToJail()														//Function to send players to jail
 	{
-		jailTurns=3;
+		jailTurns=3;																//Set turns in jail to 3!
 	}
 	
 	public int takeTurn(Die Die1, Die Die2)											//Players turn function
 	{
-		roll = Die1.Roll()+Die2.Roll();											//Roll the die
+		roll = Die1.Roll()+Die2.Roll();												//Roll the die
 		return roll;																//Return the result
 	}
 	

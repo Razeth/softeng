@@ -6,57 +6,123 @@
 		<property name="$defaultDiagram" value="true"/>
 		<property name="$metaclass" value="ClassDiagram20"/>
 		<reference referencedUin="jdt:e_class:src:MonopolyGame">
-			<property name="bounds" value="698,315,200,454"/>
+			<property name="bounds" value="1135,376,184,347"/>
 			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:MonopolyGame:Die1">
-				<property name="sourceAnchor" value="903,440"/>
-				<property name="targetAnchor" value="960,440"/>
-			</reference>
 			<reference referencedUin="jdt:l_ast:src:MonopolyGame:gameBoard">
-				<property name="sourceAnchor" value="706,320"/>
-				<property name="targetAnchor" value="706,314"/>
+				<property name="sourceAnchor" value="1140,381"/>
+				<property name="targetAnchor" value="893,381"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:MonopolyGame:gameBoard">
+					<property name="bounds" value="903,359,10,19"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:MonopolyGame:gameBoard">
+					<property name="bounds" value="1130,359,10,19"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:MonopolyGame:Die1">
+				<property name="sourceAnchor" value="1324,520"/>
+				<property name="targetAnchor" value="1380,520"/>
+				<property name="location_set_by_user" value="true"/>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:MonopolyGame:Die1">
+					<property name="bounds" value="1334,498,10,19"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:MonopolyGame:Die1">
+					<property name="bounds" value="1360,498,10,19"/>
+				</reference>
 			</reference>
 			<reference referencedUin="jdt:l_ast:src:MonopolyGame:Die2">
-				<property name="sourceAnchor" value="903,432"/>
-				<property name="targetAnchor" value="960,432"/>
+				<property name="sourceAnchor" value="1324,492"/>
+				<property name="targetAnchor" value="1380,492"/>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:MonopolyGame:Die2">
+					<property name="bounds" value="1334,470,10,19"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:MonopolyGame:Die2">
+					<property name="bounds" value="1360,470,10,19"/>
+				</reference>
 			</reference>
 			<reference referencedUin="jdt:l_ast:src:MonopolyGame:players">
-				<property name="sourceAnchor" value="703,497"/>
-				<property name="targetAnchor" value="494,497"/>
+				<property name="sourceAnchor" value="1140,694"/>
+				<property name="targetAnchor" value="468,694"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:MonopolyGame:players">
+					<property name="bounds" value="478,672,21,19"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:MonopolyGame:players">
+					<property name="bounds" value="1120,672,10,19"/>
+				</reference>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:BoardSquare">
-			<property name="bounds" value="335,15,142,274"/>
+			<property name="bounds" value="335,15,157,258"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:l_ast:src:BoardSquare:owner">
-				<property name="sourceAnchor" value="413,294"/>
-				<property name="targetAnchor" value="413,320"/>
+				<property name="sourceAnchor" value="413,278"/>
+				<property name="targetAnchor" value="413,660"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:BoardSquare:owner">
+					<property name="bounds" value="416,631,21,19"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:BoardSquare:owner">
+					<property name="bounds" value="416,279,10,19"/>
+				</reference>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:Player">
-			<property name="bounds" value="335,315,154,354"/>
+			<property name="bounds" value="335,655,128,348"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:Board">
-			<property name="bounds" value="698,15,180,294"/>
+			<property name="bounds" value="698,15,190,362"/>
 			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Board:CoincidencePile">
+				<property name="sourceAnchor" value="893,60"/>
+				<property name="targetAnchor" value="1040,60"/>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Board:CoincidencePile">
+					<property name="bounds" value="903,38,10,19"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Board:CoincidencePile">
+					<property name="bounds" value="1020,38,10,19"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Board:ProvidencePile">
+				<property name="sourceAnchor" value="893,160"/>
+				<property name="targetAnchor" value="1040,160"/>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Board:ProvidencePile">
+					<property name="bounds" value="903,138,10,19"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Board:ProvidencePile">
+					<property name="bounds" value="1020,138,10,19"/>
+				</reference>
+			</reference>
 			<reference referencedUin="jdt:l_ast:src:Board:pieces">
-				<property name="sourceAnchor" value="883,122"/>
-				<property name="targetAnchor" value="1140,122"/>
+				<property name="sourceAnchor" value="781,20"/>
+				<property name="targetAnchor" value="781,-69"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Board:pieces">
+					<property name="bounds" value="784,-68,21,19"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Board:pieces">
+					<property name="bounds" value="784,-9,10,19"/>
+				</reference>
 			</reference>
 			<reference referencedUin="jdt:e_field:src:Board.pieces">
 			</reference>
 			<reference referencedUin="jdt:l_ast:src:Board:squares">
 				<property name="sourceAnchor" value="703,127"/>
-				<property name="targetAnchor" value="482,127"/>
+				<property name="targetAnchor" value="497,127"/>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Board:squares">
+					<property name="bounds" value="683,105,10,19"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Board:squares">
+					<property name="bounds" value="507,105,21,19"/>
+				</reference>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:Piece">
-			<property name="bounds" value="1135,15,186,214"/>
+			<property name="bounds" value="698,-242,190,168"/>
 			<property name="location_set_by_user" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:e_field:src:Piece.pieceName">
+			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:Die">
-			<property name="bounds" value="955,395,110,80"/>
+			<property name="bounds" value="1375,455,95,80"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:TestPlayer">
@@ -105,27 +171,27 @@
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:StartSquare">
-			<property name="bounds" value="515,155,142,114"/>
+			<property name="bounds" value="555,150,119,91"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:l_gnt:src:StartSquare:BoardSquare">
-				<property name="sourceAnchor" value="520,217"/>
-				<property name="targetAnchor" value="482,217"/>
+				<property name="sourceAnchor" value="560,217"/>
+				<property name="targetAnchor" value="497,217"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:WaterSquare">
-			<property name="bounds" value="95,135,142,114"/>
+			<property name="bounds" value="34,98,119,91"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:l_gnt:src:WaterSquare:BoardSquare">
-				<property name="sourceAnchor" value="242,185"/>
+				<property name="sourceAnchor" value="158,185"/>
 				<property name="targetAnchor" value="340,185"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:ElectricitySquare">
-			<property name="bounds" value="515,-4,145,114"/>
+			<property name="bounds" value="455,-165,122,91"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:l_gnt:src:ElectricitySquare:BoardSquare">
-				<property name="sourceAnchor" value="520,67"/>
-				<property name="targetAnchor" value="482,67"/>
+				<property name="sourceAnchor" value="478,-69"/>
+				<property name="targetAnchor" value="478,20"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:BlankSquare">
@@ -138,6 +204,128 @@
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:SendJailSquare">
+			<property name="bounds" value="35,-5,119,91"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:SendJailSquare:BoardSquare">
+				<property name="sourceAnchor" value="159,55"/>
+				<property name="targetAnchor" value="340,55"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:CardPileA">
+			<property name="bounds" value="1035,15,95,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:CardPileA:CardPile">
+				<property name="sourceAnchor" value="1135,70"/>
+				<property name="targetAnchor" value="1263,70"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:PropertySquare">
+			<property name="bounds" value="255,-165,119,91"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:PropertySquare:BoardSquare">
+				<property name="sourceAnchor" value="359,-69"/>
+				<property name="targetAnchor" value="359,20"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:CardSquare">
+			<property name="bounds" value="34,215,119,122"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:CardSquare:BoardSquare">
+				<property name="sourceAnchor" value="158,240"/>
+				<property name="targetAnchor" value="340,240"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:JailSquare">
+			<property name="bounds" value="235,376,119,91"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:JailSquare:BoardSquare">
+				<property name="sourceAnchor" value="349,381"/>
+				<property name="targetAnchor" value="349,278"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:CardPile">
+			<property name="bounds" value="1258,35,118,107"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:CardPile:Pile">
+				<property name="sourceAnchor" value="1381,93"/>
+				<property name="targetAnchor" value="1440,93"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:CardPile:Pile">
+					<property name="bounds" value="1409,71,21,19"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:CardPile:Pile">
+					<property name="bounds" value="1391,71,10,19"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:AirportSquare">
+			<property name="bounds" value="475,355,119,91"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:AirportSquare:BoardSquare">
+				<property name="sourceAnchor" value="488,360"/>
+				<property name="targetAnchor" value="488,278"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Card">
+			<property name="bounds" value="1435,35,110,182"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:CardPileB">
+			<property name="bounds" value="1035,115,95,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:CardPileB:CardPile">
+				<property name="sourceAnchor" value="1135,133"/>
+				<property name="targetAnchor" value="1263,133"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::1g64yhg4ynlw2wz9fkx">
+			<property name="bounds" value="245,-42,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::mnztobhg4ynz60-be0hjf">
+			<property name="bounds" value="475,-42,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::pzmvqghg4yo6l4xqnbqy">
+			<property name="bounds" value="515,248,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::3t0thnhg4yod57mzhiw8">
+			<property name="bounds" value="494,312,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::dvz0eahg4yogl3-r0lb1s">
+			<property name="bounds" value="235,336,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::9y0mrbhg4yolml464rwo">
+			<property name="bounds" value="195,248,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::7oxvhlhg4yoojw-avx4eh">
+			<property name="bounds" value="195,150,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::bgmlryhg4yorv7-sl44v5">
+			<property name="bounds" value="195,61,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::pzmvqghg4ywtcrchoz9b">
+			<property name="bounds" value="1135,35,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::l1dbbohg4ywxokjgp0u6">
+			<property name="bounds" value="1135,98,100,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
 		</reference>
 	</view>
 </nodeSet>

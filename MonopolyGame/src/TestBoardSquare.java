@@ -1,3 +1,12 @@
+/////////////////////////////////////////////
+//                                         //
+//          TestBoardSquare.java           //
+//                                         //
+// Test Board Square class, tests the      //
+// board square class                      // 
+//                                         //
+/////////////////////////////////////////////
+
 import java.awt.Color;
 
 public class TestBoardSquare {
@@ -5,7 +14,7 @@ public class TestBoardSquare {
 	
 	public TestBoardSquare()
 	{
-		BoardSquareTest = new PropertySquare("Test Square",0,10,20,Color.BLUE);
+		BoardSquareTest = new PropertySquare("Test Square",0,10,20,Color.BLUE, "Blue");
 	}
 	
 	public String runTest()

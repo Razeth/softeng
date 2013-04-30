@@ -3,13 +3,14 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class PropertySquare extends BoardSquare {
-	public PropertySquare(String sqName, int sqPosition, int cost, int rent, Color colour)								//Square Constructor
+	public PropertySquare(String sqName, int sqPosition, int cost, int rent, Color colour, String colourString)			//Square Constructor
 	{
 		this.sqName=sqName;																								//Set the name
 		this.sqPosition=sqPosition;																						//Set the position
 		this.cost=cost;
 		this.rent=rent;
 		this.colour=colour;
+		this.colourString = colourString;
 	}
 	
 	public String landedOn(Player player, Board board)
@@ -19,7 +20,7 @@ public class PropertySquare extends BoardSquare {
 			//For now, force the player to own the square!
 			if(player.getMoney()>=this.cost)
 			{
-				int buy = JOptionPane.showConfirmDialog(null, "Would you like to purchase "+this.getName()+"?", player.getName(), JOptionPane.YES_NO_OPTION);
+				int buy = JOptionPane.showConfirmDialog(null, this.getName()+"\n\r------------\n\r"+this.colourString+"\n\rCost:"+this.cost+"\n\rRent:"+this.rent+"\n\r \n\rWould you like to purchase "+this.getName()+"?", player.getName(), JOptionPane.YES_NO_OPTION);
 				if(buy==JOptionPane.YES_OPTION)
 				{
 					player.subMoney(this.cost);

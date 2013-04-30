@@ -1,3 +1,12 @@
+/////////////////////////////////////////////
+//                                         //
+//             TestPlayer.jav              //
+//                                         //
+// Test Player class, tests the player     //
+// class                                   //
+//                                         //
+/////////////////////////////////////////////
+
 public class TestPlayer {
 	Player PlayerTest;
 	

@@ -1,3 +1,11 @@
+/////////////////////////////////////////////
+//                                         //
+//              TestDie.java               //
+//                                         //
+// Test Die class, tests the die 10 times  // 
+//                                         //
+/////////////////////////////////////////////
+
 public class TestDie {
 	Die DieTest;
 	

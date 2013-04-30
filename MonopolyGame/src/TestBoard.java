@@ -1,3 +1,12 @@
+/////////////////////////////////////////////
+//                                         //
+//             TestBoard.java              //
+//                                         //
+// Test Board class, tests the board class //
+//                                         //
+/////////////////////////////////////////////
+
+
 public class TestBoard {
 	Board BoardToTest;
 	

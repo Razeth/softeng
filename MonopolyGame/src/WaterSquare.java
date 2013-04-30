@@ -1,3 +1,13 @@
+/////////////////////////////////////////////
+//                                         //
+//            WaterSquare.java             //
+//                                         //
+// Water Square class, held by board       //
+// class, utility. Essentially same as     //
+// Electricity Square.                     //
+//                                         //
+/////////////////////////////////////////////
+
 import javax.swing.JOptionPane;
 
 public class WaterSquare extends BoardSquare {
@@ -9,7 +19,6 @@ public class WaterSquare extends BoardSquare {
 	
 	public String landedOn(Player player, Board board, MonopolyGame game)
 	{
-		
 		
 		if(owner==null)																//This square is not owned
 		{

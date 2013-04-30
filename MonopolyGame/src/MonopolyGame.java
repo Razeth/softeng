@@ -8,8 +8,15 @@
 /////////////////////////////////////////////
 
 
-import java.awt.BorderLayout;														//Import for swing layout
-import javax.swing.*;																//Import for swing
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.SwingUtilities;
+//Import for swing layout
+//Import for swing
 
 
 public class MonopolyGame extends JFrame {											//Main class, extends JFrame for simplicity
@@ -26,14 +33,38 @@ public class MonopolyGame extends JFrame {											//Main class, extends JFram
 	public String enteredString="";													//Read string for Dialog Input
 	
 	//For the Game
+	
+	/**
+	 * @clientCardinality 1
+	 * @supplierCardinality 1..*
+	 */
+	
 	public Player[] players;														//Array for Players
 	public int numberOfPlayers;														//Count for # of Players
 	
 	public int numberOfRounds;														//Amount of rounds for the game
 	
+	
+	/**
+	 * @clientCardinality 1
+	 * @supplierCardinality 1
+	 */
+	
 	public Board gameBoard;															//Variable for the main Board
 	
+	
+	/**
+	 * @clientCardinality 1
+	 * @supplierCardinality 1
+	 */
+	
 	public Die Die1;																//First Die
+	
+	/**
+	 * @clientCardinality 1
+	 * @supplierCardinality 1
+	 */
+	
 	public Die Die2;																//Second Die
 	
 	public MonopolyGame()															//MonopolyGame Constructor
